@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameTraiActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <Button
+        android:id="@+id/exitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mybutton"
+        android:onClick="endGame"
+        android:padding="10dp"
+        android:text="BEENDEN"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/questionCntr2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questionCntr2"
+        android:layout_width="wrap_content"
+        android:layout_height="62dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="TRAININGSMODUS"
+        android:textColor="@android:color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/exitBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/skipBtn"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:enabled="false"
+        android:onClick="continueToQuestion"
+        android:text="Nächste Frage"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/answer2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/questionCntr" />
+
+    <Button
+        android:id="@+id/answer1"
+        android:layout_width="160dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="Antwort 1"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/answer3"
+        app:layout_constraintEnd_toStartOf="@+id/answer2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/answer3"
+        android:layout_width="160dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/mybutton"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="Antwort 3"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/answer4"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/answer2"
+        android:layout_width="160dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="Antwort 2"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/answer4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/answer1" />
+
+    <Button
+        android:id="@+id/answer4"
+        android:layout_width="160dp"
+        android:layout_height="115dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/mybutton"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="Antwort 4"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/answer3" />
+
+    <TextView
+        android:id="@+id/questionCntr"
+        android:layout_width="160dp"
+        android:layout_height="62dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:text="FRAGE 0/10"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/answer1"
+        app:layout_constraintEnd_toStartOf="@+id/skipBtn"
+        app:layout_constraintHorizontal_bias="0.277"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:background="@drawable/mybutton"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.282">
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=". Frage"
+            android:textColor="@android:color/black"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Frage"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

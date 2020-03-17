@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wst_app">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_school_black_24dp"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_school_black_24dp"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".BackgroundService" />
+
+        <activity android:name=".ImpressumActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".EndActivity"
+            android:parentActivityName=".CategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wst_app.CategoryActivity" />
+        </activity>
+        <activity
+            android:name=".StatisticActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wst_app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".CategoryActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wst_app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".DescriptionActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wst_app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wst_app.MainActivity" />
+        </activity>
+        <activity
+            android:name=".GameActivity"
+            android:parentActivityName=".CategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wst_app.CategoryActivity" />
+        </activity>
+        <activity
+            android:name=".GameTraiActivity"
+            android:parentActivityName=".CategoryActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.wst_app.CategoryActivity" />
+        </activity>
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Easy Learning</string>
+    <string name="title_activity_settings2">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="fragen_lt_fragenkatalog_der_wko_o_f_r_die_lehrabschlusspr_fungen_metalltechniker_metalltechnik_grundmodul_pr_fstoffaufgliederung_f_r_das_fachgespr_ch">Fragen lt. <a href="https://www.wko.at/service/ooe/bildung-lehre/Fragenkataloge-zur-Lehrabschlusspruefung-in-Oberoesterreich.html#heading_M">Fragenkatalog</a> der WKO OÖ für die Lehrabschlussprüfungen Metalltechniker / Metalltechnik – Grundmodul / Prüfstoffaufgliederung für das Fachgespräch</string>
+</resources>
